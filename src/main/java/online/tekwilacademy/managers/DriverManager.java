@@ -2,6 +2,7 @@ package online.tekwilacademy.managers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -12,11 +13,15 @@ public class DriverManager {
     private static DriverManager instance;
     private static WebDriver driver;
     private static final String WEB_DRIVER_TYPE = "Chrome";
+    public Object quitthedriver;
 
     private DriverManager(){
         switch (WEB_DRIVER_TYPE.toUpperCase(){
             case "CHROME":
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(options);
+                driver.manage().window().maximize();
                 System.out.println("The Chrome Driver is opened");
                 break;
 
@@ -46,14 +51,20 @@ public class DriverManager {
         }
         return instance;
 
-        public WebDriver getDriver(){
-            return driver;
+      public WebDriver getDriver;() { return driver; }
 
-        }
+      public void quiteTheDriver(){
+          driver.quit();
+          driver = null;
+          instance = null;
+          System.out.println("The Driver is closed after running and completing a test scenario");
 
-
+      }
     }
 
-    public Map<Object, Object> getDriver() {
+    public void quitthedriver() {
+    }
+
+    public Object getDriver() {
     }
 }
