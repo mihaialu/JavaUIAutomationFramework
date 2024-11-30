@@ -1,4 +1,4 @@
 package online.tekwilacademy.stepdefinitions;
 
-public class ExampleSteps {
+public @interface When {
 }
