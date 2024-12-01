@@ -48,4 +48,7 @@ public class RegisterPage extends Page{
 
 
     }
+
+    public void clickOnTheContinueBtn() {
+    }
 }

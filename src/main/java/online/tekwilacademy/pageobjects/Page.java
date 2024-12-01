@@ -32,5 +32,5 @@ public abstract class Page {
 
     public abstract void enableTheToggleBar();
 
-    public abstract void clickOnTheContinueBtn();
+    public abstract clickOnTheContinueBtn();
 }
