@@ -33,8 +33,4 @@ public class LoginPage extends Page{
         passwordInput.sendKeys(password);
 
     }
-
-    public void clickTheLoginBtn(){
-        loginBtn.click();
-    }
 }

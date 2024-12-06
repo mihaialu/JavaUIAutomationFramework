@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/main/java/online/tekwilacademy/feuters",
         glue = "online.tekwilacademy.stepdefinitions"
-        tags = "@run"
+        tags = ""
 )
 
 public class CucumberTestRunner {

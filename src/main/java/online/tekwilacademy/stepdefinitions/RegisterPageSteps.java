@@ -27,17 +27,6 @@ public class RegisterPageSteps {
 
     }
 
-    @And("The privacy toggle bar is enabled")
-    public void thePrivacyToggleBarIsEnabled() {
-        RegisterPage registerPage1 = registerPage;
-        registerPage1.enableTheToggleBar();
-
-    }
-
-    @When("ThecontinueButtonisClicked")
-    public  void theContinueButtonIsClicked() {
-        registerPage.clickOnTheContinueBtn();
-    }
 
     @And("the register form is populated as following:")
     public <userDetailMap> void theRegisterFormIsPopulatedAsFollowing(Map<String>, String> userDetailMap) {

@@ -12,7 +12,7 @@ import java.util.Map;
 public class DriverManager {
     private static DriverManager instance;
     private static WebDriver driver;
-    private static final String WEB_DRIVER_TYPE = "Chrome";
+    private static final String WEB_DRIVER_TYPE = ConfigReaderManager.getProperty("browserType");
     public Object quitthedriver;
 
     private DriverManager(){
