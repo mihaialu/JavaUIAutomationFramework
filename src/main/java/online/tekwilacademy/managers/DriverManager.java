@@ -12,7 +12,7 @@ import java.util.Map;
 public class DriverManager {
     private static DriverManager instance;
     private static WebDriver driver;
-    private static final String WEB_DRIVER_TYPE = "Chrome";
+    private static final String WEB_DRIVER_TYPE = ConfigReaderManager.getProperty("browserType");
     public Object quitthedriver;
 
     private DriverManager(){
@@ -20,6 +20,7 @@ public class DriverManager {
             case "CHROME":
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
+                options.addArguments(("--incognito"))
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
                 System.out.println("The Chrome Driver is opened");
